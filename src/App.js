@@ -1,25 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import AppBar from "./components/AppBar";
+import Footer from "./components/Footer";
+import "./App.css";
+import Main from "./Pages/Main";
+import Wrapper from "./components/Wrapper/index";
+import SignIn from "./Pages/SignIn";
+import FAQ from "./Pages/FAQ";
+import Advice from "./Pages/Advice";
+import Foods from "./Pages/Foods";
+import Recipes from "./Pages/Recipe";
+import Philosophy from "./Pages/Philosophy";
+
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+      <div className="App">
+        <AppBar />
+          <Wrapper>
+          <Route exact path="/" component={Main} />
+          <Route exact path="/signin" component={SignIn} />
+          <Route exact path="/faq" component={FAQ} />
+          <Route exact path="/advice" component={Advice} />
+          <Route exact path="/foods" component={Foods} />
+          <Route exact path="/recipes" component={Recipes} />
+          <Route exact path="/philosophy" component={Philosophy} />
+          </Wrapper>
+      <Footer />
     </div>
+    </Router>
   );
 }
 
