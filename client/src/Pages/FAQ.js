@@ -81,8 +81,7 @@ export default function FAQ() {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
+            The rate at which you lose weight will be dependent on how much of a caloric deficit you put yourself on. However, we do not recomened losing more than 1-1.5 pounds per week.
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
@@ -96,8 +95,7 @@ export default function FAQ() {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
+            If your activity level changes, recalculate your daily calories so you are properly fueling your body.
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
@@ -111,8 +109,7 @@ export default function FAQ() {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
+            Your off days will be reduced calories due to the little amount of activity. We recommend reducing your carb intake on off days.
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
@@ -126,8 +123,7 @@ export default function FAQ() {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
+            Being hungry is OK. The reason you are feeling hungry is because your body is used to consuming more calories but in order to lose weight we must cut back caloires which can tend to make us hungry.
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
@@ -141,8 +137,7 @@ export default function FAQ() {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
+            The diet is as strict as you make it, the stricter you are with your nutrition the sooner you will see results.
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
@@ -156,8 +151,7 @@ export default function FAQ() {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
+            We recommend that if you struggle not eating enjoyable foods to have a single cheat meal on occasion. However, do not allow your cheat meal turn into a cheat day or cheat week/weekend.
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
@@ -171,8 +165,7 @@ export default function FAQ() {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
+            All excercise is great cause you're buring calories. However, we recommend excercise that involves weight lifting due to its ability to burn a lot of calories and increase muscle which helps change the body composition.
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
@@ -186,8 +179,7 @@ export default function FAQ() {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
+            Everything must be used in moderation. If you heavily rely on sauces or dressings, find a low calorie option. Otherwise, I recommend trying to avoid them as they add a lot of empty calories to your diet.
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
@@ -201,8 +193,7 @@ export default function FAQ() {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
+            While dieting water consumption is crucial. Men should consume about a gallon of water per day and women should take in about 3/4 gallon. Other low caloire drinks are allowed but do not count toward your daily water intake goal.
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
@@ -216,8 +207,7 @@ export default function FAQ() {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
+            Cheat meals are acceptable but try to keep them to once a week. The more cheat meals you have the longer it takes to get your body where you want it to be.
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
@@ -227,12 +217,11 @@ export default function FAQ() {
           aria-controls="panel4a-content"
           id="panel4a-header"
         >
-          <Typography className={classes.heading}>Do I have to eat the foods specified?</Typography>
+          <Typography className={classes.heading}>Do I have to eat specific foods?</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
+            All vegetables are good, any meat above 90% lean is where we draw the line anything else has a high fat content. Carbs shoudl consist of rice, pasta and whole grains. Stay away from all fried and processed foods.
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
@@ -246,8 +235,7 @@ export default function FAQ() {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
+            Drinking alcohol slows down your results dramatically so we recomened drinking alchol as little as possible.
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
@@ -261,8 +249,7 @@ export default function FAQ() {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
+            We highly recommend eating meat due to its natural high protein content which is hard to get from any other foods. Vegetables help with digestion so try finding some that you enjoy because it helps with overall health.
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>

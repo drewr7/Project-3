@@ -10,7 +10,6 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -97,11 +96,8 @@ export default function Blog() {
 {/* Footer */}
 <footer className={classes.footer}>
 <Container maxWidth="lg">
-  <Typography variant="h6" align="center" gutterBottom>
-    Footer
-  </Typography>
   <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-    Something here to give the footer a purpose!
+    Fundamental Nutrition
   </Typography>
   <Copyright />
 </Container>

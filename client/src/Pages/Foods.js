@@ -143,7 +143,7 @@ export default function Foods() {
               <Grid item md={6}>
                 <div className={classes.mainFeaturedPostContent}>
                   <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-                    Calculate My Macros
+                    My Daily Calorie Intake
                   </Typography>
                 </div>
               </Grid>

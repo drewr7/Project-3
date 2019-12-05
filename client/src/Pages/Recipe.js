@@ -5,6 +5,10 @@ import API from "../utils/API";
 import { RecipeList, RecipeListItem } from "../components/RecipeList";
 import { Container, Row, Col } from "../components/Grided";
 
+const DivStyle = {
+  textAlign: 'center'
+}
+
 class RecipeApp extends Component {
   state = {
     recipes: [],
@@ -32,6 +36,9 @@ class RecipeApp extends Component {
     return (
       <div>
         <Container>
+          <br/>
+          <h3 className="text-center">Search for healthy recipes</h3>
+          <br/>
           <Row>
             <Col size="md-12">
               <form>
@@ -59,10 +66,11 @@ class RecipeApp extends Component {
               </form>
             </Col>
           </Row>
-          <Row>
+          <Row style={DivStyle}>
             <Col size="xs-12">
+              <br/>
               {!this.state.recipes.length ? (
-                <h1 className="text-center">No Recipes to Display</h1>
+                <h3> </h3>
               ) : (
                 <RecipeList>
                   {this.state.recipes.map(recipe => {

@@ -80,9 +80,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const sections = [
-  {title: 'Philosophy', path:'/philosophy'},
-  {title: 'Advice & Mistakes', path: '/advice'},
-  {title: 'Calculate My Macros', path: '/foods'},
+  {title: 'Calculate Daily Calories', path: '/foods'},
   {title: 'Recipes', path: '/recipes'},
   {title: 'FAQ', path: '/faq'}
   
