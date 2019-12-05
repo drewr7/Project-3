@@ -153,7 +153,7 @@ export default function Foods() {
                 <body1>
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
-        Enter your information and get your daily Macros
+        Enter your information and get your daily calorie count
       </Typography>
       <br/>
       <div>
