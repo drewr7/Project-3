@@ -221,9 +221,6 @@ export default function Foods() {
             Submit
         </Button>
         <br/>
-        <div>
-            //Macro Results
-        </div>
     </React.Fragment>
                 </body1>
               </Typography>
