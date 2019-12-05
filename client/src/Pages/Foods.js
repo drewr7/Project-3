@@ -11,6 +11,7 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button';
+import ReactDOM from 'react-dom'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -54,36 +55,36 @@ const inputStyle = {
   padding: 10
 }
 
-const activitylevel = [
+const activity = [
   {
-    value: '1.2',
+    value: 1.2,
     label: 'Sedentary',
   },
   {
-    value: '1.375',
+    value: 1.375,
     label: 'Lightly active',
   },
   {
-    value: '1.55',
+    value: 1.55,
     label: 'Moderately active',
   },
   {
-    value: '1.725',
+    value: 1.725,
     label: 'Very active',
   },
   {
-    value: '1.9',
+    value: 1.9,
     label: 'Extra active',
   }
 ];
 
 const gender = [
   {
-    value: '1',
+    value: 1,
     label: 'Male',
   },
   {
-    value: '2',
+    value: 2,
     label: 'Female',
   }
 ];
@@ -91,27 +92,40 @@ const gender = [
 export default function Foods() {
   const classes = useStyles();
   const [values, setValues] = React.useState({
-    amount: '',
-    weight: '',
-    height:'',
-    showPassword: false,
+    gender: 1,
+    weight: 0,
+    height:0,
+    age: 0,
+    acitvity: 1.55,
   });
 
   const handleChange = prop => event => {
     setValues({ ...values, [prop]: event.target.value });
   };
 
-  const [activity, setActivity] = React.useState('3');
-
-  const activityChange = event => {
-    setActivity(event.target.value);
-  };
-
-  const [genders, setGender] = React.useState('Male');
-
-  const genderChange = event => {
-    setGender(event.target.value);
-  };
+  const calculateMacros = event => {
+    let calories = 0
+    if(values.gender === 1){
+      let malecals = ((values.weight*10)+(values.height*6.25)-(values.age*5)+5)*values.acitvity
+      // this.setState({result: malecals})
+      calories = (
+        <div>
+      <h3>Your daily calorie goal</h3>
+      <h1>{malecals}</h1>
+      </div>
+      );
+      console.log(malecals)
+      ReactDOM.render(calories, document.getElementById('calculatedcals'));
+    }
+    else if(values.gender === 2){
+      let femalecals = (((values.weight)*(10))+((values.height)*(6.25))-((values.age)*(5))-(161))*(values.activity)
+      // this.setState({result: femalecals})
+      calories = femalecals
+      console.log(femalecals)
+      ReactDOM.render(calories, document.getElementById('calculatedcals'));
+    }
+    return 
+  }
 
   return (
     <div className={classes.root}>
@@ -146,8 +160,8 @@ export default function Foods() {
       <TextField
           id="outlined-select-currency"
           select
-          value={genders}
-          onChange={genderChange}
+          value={values.gender}
+          onChange={handleChange('gender')}
           helperText="Gender"
           variant="outlined"
           style={inputStyle}
@@ -162,8 +176,9 @@ export default function Foods() {
           <OutlinedInput
             id="outlined-adornment-weight"
             value={values.weight}
+            type="number"
             onChange={handleChange('weight')}
-            endAdornment={<InputAdornment position="end">Inches</InputAdornment>}
+            endAdornment={<InputAdornment position="end">kg</InputAdornment>}
             aria-describedby="outlined-weight-helper-text"
             inputProps={{
               'aria-label': 'weight',
@@ -174,42 +189,44 @@ export default function Foods() {
         </FormControl>
         <FormControl className={clsx(classes.margin, classes.textField)} variant="outlined" style={inputStyle}>
           <OutlinedInput
-            id="outlined-adornment-weight"
-            value={values.weight}
-            onChange={handleChange('weight')}
-            endAdornment={<InputAdornment position="end">Kg</InputAdornment>}
-            aria-describedby="outlined-weight-helper-text"
+            id="outlined-adornment-height"
+            value={values.height}
+            type="number"
+            onChange={handleChange('height')}
+            endAdornment={<InputAdornment position="end">cm</InputAdornment>}
+            aria-describedby="outlined-height-helper-text"
             inputProps={{
-              'aria-label': 'weight',
+              'aria-label': 'height',
             }}
             labelWidth={0}
           />
-          <FormHelperText id="outlined-weight-helper-text">Weight</FormHelperText>
+          <FormHelperText id="outlined-weight-helper-text">Height</FormHelperText>
         </FormControl>
         <FormControl className={clsx(classes.margin, classes.textField)} variant="outlined" style={inputStyle}>
           <OutlinedInput
-            id="outlined-adornment-weight"
-            value={values.weight}
-            onChange={handleChange('weight')}
-            endAdornment={<InputAdornment position="end">Kg</InputAdornment>}
-            aria-describedby="outlined-weight-helper-text"
+            id="outlined-adornment-age"
+            value={values.age}
+            type="number"
+            onChange={handleChange('age')}
+            endAdornment={<InputAdornment position="end">yrs</InputAdornment>}
+            aria-describedby="outlined-age-helper-text"
             inputProps={{
-              'aria-label': 'weight',
+              'aria-label': 'age',
             }}
             labelWidth={0}
           />
-          <FormHelperText id="outlined-weight-helper-text">Weight</FormHelperText>
+          <FormHelperText id="outlined-weight-helper-text">Age</FormHelperText>
         </FormControl>
         <TextField
           id="outlined-select-currency"
           select
-          value={activity}
-          onChange={activityChange}
+          value={values.acitvity}
+          onChange={handleChange('activity')}
           helperText="Activity Level"
           variant="outlined"
           style={inputStyle}
         >
-          {activitylevel.map(option => (
+          {activity.map(option => (
             <MenuItem key={option.value} value={option.value}>
               {option.label}
             </MenuItem>
@@ -217,10 +234,14 @@ export default function Foods() {
         </TextField>
       </div>
       <br/>
-      <Button variant="contained" color="primary" size="large">
+      <Button variant="contained" color="primary" size="large" onClick={calculateMacros}>
             Submit
         </Button>
         <br/>
+        <br/>
+        <br/>
+        <div id="calculatedcals">
+        </div>
     </React.Fragment>
                 </body1>
               </Typography>
